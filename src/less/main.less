@@ -1,0 +1,132 @@
+@unchecked: rgb(235, 239, 240);
+@checked: rgb(25, 187, 155);
+@drawer-bg: rgb(246, 247, 249);
+@type-bg: rgb(254, 254, 254);
+@spacer: rgb(235, 239, 240);
+
+#map,
+body,
+main,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
+}
+
+header {
+    position: absolute;
+}
+
+.mdl-layout__obfuscator {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.mdl-layout__drawer {
+    background-color: @drawer-bg;
+    > .mdl-layout-title {
+        padding: 0 20px;
+         & > i {
+            vertical-align: text-top;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+    }
+
+    label {
+        display: block;
+        user-select: none;
+        padding: 20px;
+        background-color: @type-bg;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+
+        &.active, &:hover { color: @checked; }
+
+        & + label {
+            border-top: 2px solid @spacer;
+        }
+
+        input {
+            display: none;
+
+            & + span {
+                float: right;
+                font-size: 20px;
+
+                & > i { color: @unchecked; }
+                & > .fa-check-square { display: none; }
+            }
+
+            &:checked + span > .fa-square { display: none; }
+            &:checked + span > .fa-check-square {
+                display: inline-block;
+                color: @checked;
+            }
+        }
+    }
+
+    .languages {
+        margin-bottom: 25px;
+        .language {
+            background-color: rgb(255, 255, 255);
+            display: block;
+            padding: 15px 20px;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+
+            &.active, &:hover {
+                color: @checked;
+            }
+
+            & + .language {
+                border-top: 2px solid @spacer;
+            }
+        }
+    }
+
+    .buttons {
+        margin: 25px 0;
+        text-align: center;
+
+        button {
+            width: 100px;
+        }
+    }
+}
+
+body.rtl {
+    .mdl-layout__drawer {
+        .mdl-layout-title { direction: rtl; }
+        label {
+            direction: rtl;
+             input {
+                & + span {
+                    float: left;
+                }
+            }
+        }
+
+        .languages {
+            .language {
+                direction: rtl;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hidden-sm {
+        display: none;
+    }
+}

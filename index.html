@@ -1,0 +1,63 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title data-i18n="title"></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.teal-blue.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Viäressä</span>
+        <div class="mdl-layout-spacer hidden-sm"></div>
+        <span class="hidden-sm" data-i18n="intro"></span>
+      </div>
+    </header>
+    <div id="drawer" class="mdl-layout__drawer">
+      <span class="mdl-layout-title"><span data-i18n="services"></span>
+        <i id="close" class="material-icons">menu</i>
+      </span>
+      <div class="types"></div>
+      <div class="buttons">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="all" data-i18n="all"></button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="none" data-i18n="none"></button>
+      </div>
+      <span class="mdl-layout-title"><span data-i18n="language"></span>
+      </span>
+      <div class="languages">
+        <a href="#" data-lang="fi" class="language fi fi-FI" data-i18n="finnish"></a>
+        <a href="#" data-lang="en" class="language en" data-i18n="english"></a>
+        <a href="#" data-lang="ar" class="language ar" data-i18n="arabic"></a>
+      </div>
+    </div>
+    <main class="mdl-layout__content">
+      <div id="map"></div>
+    </main>
+  </div>
+  <script id="filter-template" type="text/x-handlebars-template">
+    <label for="type-{{type}}">{{type_i18n}}
+      <input type="checkbox" id="type-{{type}}" value="{{type}}" />
+      <span>
+        <i class="fa fa-square"></i>
+        <i class="fa fa-check-square"></i>
+      </span>
+    </label>
+  </script>
+  <script type="text/javascript" src="//storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPiaoIMNRcBxDFQKIuHV-27ViDYVJmAoA&libraries=visualization"></script>
+  <script type="text/javascript" src="assets/js/vendor.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.min.js"></script>
+</body>
+</html>

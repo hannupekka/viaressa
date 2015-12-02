@@ -1,0 +1,30 @@
+{
+  "name": "Viaressa",
+  "version": "1.0.0",
+  "description": "Maps Tampere public services",
+  "main": "index.js",
+  "scripts": {
+    "vendor": "uglifyjs ./node_modules/es5-shim/es5-shim.min.js ./node_modules/es6-shim/es6-shim.min.js ./node_modules/jquery/dist/jquery.min.js ./node_modules/handlebars/dist/handlebars.min.js ./node_modules/baconjs/dist/Bacon.min.js ./node_modules/bacon.jquery/dist/bacon.jquery.min.js ./node_modules/bacon.model/dist/bacon.model.min.js ./node_modules/i18next-client/i18next.min.js --compress --mangle -o ./assets/js/vendor.min.js",
+    "main": "babel ./src/js/main.js | uglifyjs - --compress --mangle -o ./assets/js/main.min.js",
+    "less": "lessc ./src/less/main.less ./assets/css/main.css --autoprefix='last 2 versions' --clean-css='--s1 --advanced --compatibility=ie8'",
+    "build": "npm run vendor && npm run main && npm run less"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "bacon.jquery": "^0.4.12",
+    "bacon.model": "^0.1.12",
+    "baconjs": "^0.7.77",
+    "es5-shim": "^4.2.0",
+    "es6-shim": "^0.33.9",
+    "handlebars": "^4.0.3",
+    "i18next-client": "^1.11.1",
+    "install": "^0.2.2",
+    "jquery": "^2.1.4",
+    "less": "^2.5.3",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "uglify-js": "^2.5.0"
+  }
+}

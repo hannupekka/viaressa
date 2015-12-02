@@ -1,0 +1,20 @@
+{
+    "title": "Viäressä - Map of Tampere public services",
+    "intro": "See where Tampere offers public services",
+    "services": "Select services",
+    "all": "All",
+    "none": "None",
+    "Hammashoito": "Dentist",
+    "Kirjasto": "Library",
+    "Neuvolapalvelut": "Maternity clinic",
+    "Nuorten tilat": "Youth centre",
+    "Päivähoito": "Day care",
+    "Terveysasema": "Health centre",
+    "Uimahalli": "Swimming bath",
+    "Palvelukeskustoiminta": "Service center",
+    "Päiväkeskustoiminta": "Day center",
+    "language": "Select language",
+    "finnish": "Finnish",
+    "english": "English",
+    "arabic": "Arabic"
+}
